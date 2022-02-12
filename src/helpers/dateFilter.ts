@@ -5,7 +5,7 @@ export const getCurrentMonth = () => {
     return `${now.getFullYear()}-${now.getMonth()+1}`;
 }
 
-export const FilterListByMonth = (list: Item[], date: string): Item[] => {
+export const filterListByMonth = (list: Item[], date: string): Item[] => {
     let newList: Item[] = [];
     let[year, month] = date.split('-');
 
@@ -17,6 +17,5 @@ export const FilterListByMonth = (list: Item[], date: string): Item[] => {
             newList.push(list[i]);
         }
     }
-
     return newList;
 }
